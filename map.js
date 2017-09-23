@@ -1,8 +1,8 @@
 var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 2,
-        center: {lat: -33.865427, lng: 151.196123},
+        zoom: 8,
+        center: {lat: 7.8731, lng:80.7718},
         mapTypeId: 'terrain'
     });
 
@@ -15,7 +15,7 @@ function initMap() {
     document.getElementsByTagName('head')[0].appendChild(script);
 
     map.data.setStyle(function(feature) {
-        var magnitude = feature.getProperty('mag');
+        var magnitude = feature.getProperty('cdi');
         return {
             icon: getCircle(magnitude)
         };
