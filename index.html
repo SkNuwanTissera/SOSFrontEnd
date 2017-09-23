@@ -19,7 +19,7 @@
     <script src="controller/news.controller.js"></script>
     <script src="services/news.service.js"></script>
 
-    <script src="map.js"></script>
+    <script src="map2.js"></script>
 
     <!-- Toastr style -->
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <!--Style For Map-->
     <style>
         /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
+     * element that contains the map. */
         #map {
             height: 100%;
         }
@@ -189,11 +189,15 @@
 
         <div class="wrapper wrapper-content animated fadeIn">
             <!--<div ng-app="SOSapp" ng-controller="FeedController">-->
-                <div style="width: 100%; height: 75vh;" id="map"></div>
-                <!-- Replace the value of the key parameter with your own API key. -->
+            <div style="background: black;height: 75vh" id="map"></div>
+            <!-- Replace the value of the key parameter with your own API key. -->
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
                 <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnLzhw6Rpr20H2SsKrzrB0Cap_gqQbi5k&callback=initMap">
-                </script>
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnLzhw6Rpr20H2SsKrzrB0Cap_gqQbi5k&callback=initMap">
+            </script>
+
+
             </div>
         </div>
 
