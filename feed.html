@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="//js.pusher.com/3.0/pusher.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/pusher-angular@latest/lib/pusher-angular.min.js"></script>
     <link href="css/feed.css" rel="stylesheet">
     <!--<script src="angular/angular.min.js"></script>-->
 
@@ -187,19 +189,19 @@
                                 <div class="preview col-md-6">
 
                                     <div class="preview-pic tab-content">
-                                        <div class="tab-pane active" id="pic-1"><img src="http://boredomtherapy.com/wp-content/uploads/2017/02/9-miracle-car-accident-664x414.jpg" /></div>
-                                        <div class="tab-pane" id="pic-2"><img src="http://wpmedia.driving.ca/2014/03/turnpike-crash-1.jpg?quality=70&strip=all&w=960&h=480&crop=1" /></div>
-                                        <div class="tab-pane" id="pic-3"><img src="http://images.buyyourcar.co.uk/photos/c17896db-e12f-4aeb-a16c-585d3a7d120d/610/610_1_m.jpg" /></div>
-                                        <div class="tab-pane" id="pic-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zoDGSowWluhnN2PcGuZTMFKuFaMzZ0kqoDa_Z3e-TZ40qWRn" /></div>
-                                        <div class="tab-pane" id="pic-5"><img src="http://fancytuning.com/wp-content/uploads/2011/07/video-nissan-gtr-crashes-into-parked-cars.jpg" /></div>
+                                        <div class="tab-pane active" id="pic-1"><img src="http://boredomtherapy.com/wp-content/uploads/2017/02/9-miracle-car-accident-664x414.jpg"/></div>
+                                        <!--<div class="tab-pane" id="pic-2"><img src="http://wpmedia.driving.ca/2014/03/turnpike-crash-1.jpg?quality=70&strip=all&w=960&h=480&crop=1" /></div>-->
+                                        <!--<div class="tab-pane" id="pic-3"><img src="http://images.buyyourcar.co.uk/photos/c17896db-e12f-4aeb-a16c-585d3a7d120d/610/610_1_m.jpg" /></div>-->
+                                        <!--<div class="tab-pane" id="pic-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zoDGSowWluhnN2PcGuZTMFKuFaMzZ0kqoDa_Z3e-TZ40qWRn" /></div>-->
+                                        <!--<div class="tab-pane" id="pic-5"><img src="http://fancytuning.com/wp-content/uploads/2011/07/video-nissan-gtr-crashes-into-parked-cars.jpg" /></div>-->
                                     </div>
-                                    <ul class="preview-thumbnail nav nav-tabs">
-                                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://boredomtherapy.com/wp-content/uploads/2017/02/9-miracle-car-accident-664x414.jpg" /></a></li>
-                                        <li><a data-target="#pic-2" data-toggle="tab"><img src="http://wpmedia.driving.ca/2014/03/turnpike-crash-1.jpg?quality=70&strip=all&w=960&h=480&crop=1" /></a></li>
-                                        <li><a data-target="#pic-3" data-toggle="tab"><img src="http://images.buyyourcar.co.uk/photos/c17896db-e12f-4aeb-a16c-585d3a7d120d/610/610_1_m.jpg" /></a></li>
-                                        <li><a data-target="#pic-4" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zoDGSowWluhnN2PcGuZTMFKuFaMzZ0kqoDa_Z3e-TZ40qWRn" /></a></li>
-                                        <li><a data-target="#pic-5" data-toggle="tab"><img src="http://fancytuning.com/wp-content/uploads/2011/07/video-nissan-gtr-crashes-into-parked-cars.jpg"" /></a></li>
-                                    </ul>
+                                    <!--<ul class="preview-thumbnail nav nav-tabs">-->
+                                        <!--<li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://boredomtherapy.com/wp-content/uploads/2017/02/9-miracle-car-accident-664x414.jpg" /></a></li>-->
+                                        <!--<li><a data-target="#pic-2" data-toggle="tab"><img src="http://wpmedia.driving.ca/2014/03/turnpike-crash-1.jpg?quality=70&strip=all&w=960&h=480&crop=1" /></a></li>-->
+                                        <!--<li><a data-target="#pic-3" data-toggle="tab"><img src="http://images.buyyourcar.co.uk/photos/c17896db-e12f-4aeb-a16c-585d3a7d120d/610/610_1_m.jpg" /></a></li>-->
+                                        <!--<li><a data-target="#pic-4" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zoDGSowWluhnN2PcGuZTMFKuFaMzZ0kqoDa_Z3e-TZ40qWRn" /></a></li>-->
+                                        <!--<li><a data-target="#pic-5" data-toggle="tab"><img src="http://fancytuning.com/wp-content/uploads/2011/07/video-nissan-gtr-crashes-into-parked-cars.jpg"" /></a></li>-->
+                                    <!--</ul>-->
 
                                 </div>
                                 <div class="details col-md-6">
@@ -263,7 +265,7 @@
                                                     <span class="[ glyphicon glyphicon-minus ]"></span>
                                                 </label>
                                                 <label for="fancy-checkbox-danger-custom-icons1" class="[ btn btn-default active ]">
-                                                    Vehicles Damaged
+                                                    {{feed.tags[0].description}}
                                                 </label>
                                             </div>
                                             <input type="checkbox" name="fancy-checkbox-danger-custom-icons" id="fancy-checkbox-danger-custom-icons2" autocomplete="off" />
@@ -273,7 +275,7 @@
                                                     <span class="[ glyphicon glyphicon-minus ]"></span>
                                                 </label>
                                                 <label for="fancy-checkbox-danger-custom-icons2" class="[ btn btn-default active ]">
-                                                    Properties Damaged
+                                                    {{feed.tags[1].description}}
                                                 </label>
                                             </div>
                                         </div>
@@ -286,7 +288,7 @@
                                                     <span class="[ glyphicon glyphicon-minus ]"></span>
                                                 </label>
                                                 <label for="fancy-checkbox-danger-custom-icons3" class="[ btn btn-default active ]">
-                                                    casualty
+                                                    {{feed.tags[2].description}}
                                                 </label>
                                             </div>
                                                 <input type="checkbox" name="fancy-checkbox-danger-custom-icons" id="fancy-checkbox-danger-custom-icons4" autocomplete="off" />
@@ -296,7 +298,7 @@
                                                         <span class="[ glyphicon glyphicon-minus ]"></span>
                                                     </label>
                                                     <label for="fancy-checkbox-danger-custom-icons4" class="[ btn btn-default active ]">
-                                                        casualty
+                                                        {{feed.tags[3].description}}
                                                     </label>
                                                 </div>
                                             </div>
