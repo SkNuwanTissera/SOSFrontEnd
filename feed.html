@@ -16,6 +16,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="//js.pusher.com/3.0/pusher.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/pusher-angular@latest/lib/pusher-angular.min.js"></script>
+    <script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"></script>
+    <script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/scripts/markerclusterer.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
     <link href="css/feed.css" rel="stylesheet">
     <!--<script src="angular/angular.min.js"></script>-->
 
@@ -23,6 +27,8 @@
     <script src="app.module.js"></script>
     <script src="controller/news.controller.js"></script>
     <script src="services/news.service.js"></script>
+    <script src="controller/cluster.controller.js"></script>
+    <script src="services/cluster.service.js"></script>
 
     <script src="map.js"></script>
 
@@ -214,39 +220,39 @@
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
                                         </div>
                                         <span style="color: red;font-weight: 700;font-size: large" class="review-no">Severity Level : {{feed.severity}}</span>
                                     </div>
 
-                                    <div class="row">
+                                    <!--<div class="row">-->
 
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="offer offer-success">
-                                                <div class="shape">
-                                                    <div class="shape-text">Done</div>
-                                                </div>
-                                                <div class="offer-content">
-                                                    <h3 class="lead text-center">
-                                                        <h5>Ambulance Send</h5>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="offer offer-success">
-                                                <div class="shape">
-                                                    <div class="shape-text">Done</div>
-                                                </div>
-                                                <div class="offer-content">
-                                                    <h3 class="lead text-center">
-                                                        <h5>FireBrigade Send</h5>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">-->
+                                            <!--<div class="offer offer-success">-->
+                                                <!--<div class="shape">-->
+                                                    <!--<div class="shape-text">Done</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="offer-content">-->
+                                                    <!--<h3 class="lead text-center">-->
+                                                        <!--<h5>Ambulance Send</h5>-->
+                                                    <!--</h3>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">-->
+                                            <!--<div class="offer offer-success">-->
+                                                <!--<div class="shape">-->
+                                                    <!--<div class="shape-text">Done</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="offer-content">-->
+                                                    <!--<h3 class="lead text-center">-->
+                                                        <!--<h5>FireBrigade Send</h5>-->
+                                                    <!--</h3>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
 
                                     <!--<h4 class="price">current price: <span>$180</span></h4>-->
                                     <!--<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>-->

@@ -19,9 +19,9 @@ angular.module('SOSapp')
             console.log(data);
             $scope.feeds.push({
                 name:"Car Accident",
-                severity:"3",
-                place:"Nugegoda",
-                noOfPeople:"4",
+                severity:"5",
+                place:"Trace Expert City",
+                noOfPeople:"0",
                 tags:$scope.labels,
                 image: data.image
             });
