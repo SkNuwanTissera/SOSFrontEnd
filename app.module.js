@@ -1,1 +1,1 @@
-var app = angular.module('SOSapp', ['ngMap']);
+var app = angular.module('SOSapp', ['ngMap','pusher-angular']);
